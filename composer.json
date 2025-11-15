@@ -19,7 +19,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/phparm/entity/issues",
+        "issues": "https://github.com/phparm/phparm/issues",
         "docs": "https://phparm.github.io/phparm"
     },
     "require": {
