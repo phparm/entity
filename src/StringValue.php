@@ -4,16 +4,19 @@ declare(strict_types=1);
 
 namespace Phparm\Entity;
 
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
+use Phparm\Contract\Serialization\Arrayable;
+use Phparm\Contract\Serialization\Jsonable;
 use JsonSerializable;
 
 /**
  * @template TKey of array-key
  * @template TValue
  *
+ * ========== property_hook_method ==========
  * @method string getValue()
- * @method self setValue(string $value)
+ *
+ * @method $this setValue(string $value)
+ * ========== property_hook_method ==========
  */
 class StringValue extends Attribute
 {
@@ -25,7 +28,7 @@ class StringValue extends Attribute
     }
 
     /**
-     * @param null|Arrayable<TKey,TValue>|Jsonable|JsonSerializable|static<TKey,TValue>|string $attributes
+     * @param null|Arrayable<TKey,TValue>|Jsonable|JsonSerializable|static<TKey,TValue>|string|array $attributes
      * @param Option|null $option
      * @return array<TKey,TValue>
      */
